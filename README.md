@@ -1,9 +1,14 @@
 # TestFrameworkBoilerplate
-Boilerplate testowego frameworku w C#, aby przyspieszyć setup testów do swojego projektu.
+The Boilerplate of the testing framework 
+mostly in C#.
+The main purpose is to speed up test setup.
 
-Planowane prace:
-- dodanie projektu Tests.Integration zawierajacego Specflow
-- dodanie projektu Tests.Contract zawierajacego Pact.io
-- dodanie projektu Tests.Mutation zawierajacego Stryker.NET
-- dodanie projektu Tests.UI zawierajacego Playwright
-- dodanie projektu Tests.Performance zawierajacego NBomber
+##Issues
+
+
+##Planned work:
+- adding Tests.Integration project including Specflow
+- adding Tests.Contract project including Pact.io
+- adding Tests.Mutation project including Stryker.NET
+- adding Tests.UI project including Playwright
+- adding Tests.Performance including NBomber
