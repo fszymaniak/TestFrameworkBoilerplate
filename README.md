@@ -8,7 +8,7 @@ This repo has been created as a part of the [#100commitow challenge](https://100
 If you have any questions, issues, or improvements please leave a mark here [Issues](https://github.com/fszymaniak/TestFrameworkBoilerplate/issues)
 
 ## Milestones:
-- [Create Integration Test project](https://github.com/fszymaniak/TestFrameworkBoilerplate/milestone/1)
+- [Create Integration Test project](https://github.com/fszymaniak/TestFrameworkBoilerplate/milestone/1) - InProgress
 - [Create Contract Test project](https://github.com/fszymaniak/TestFrameworkBoilerplate/milestone/2)
 - [Create Mutation Test project](https://github.com/fszymaniak/TestFrameworkBoilerplate/milestone/3)
 - [Create UI Test project](https://github.com/fszymaniak/TestFrameworkBoilerplate/milestone/4)
