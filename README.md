@@ -1,3 +1,6 @@
+![DotNet](https://img.shields.io/badge/-.NET%207.0-darkviolet?style=for-the-badge&logo=.net&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+
 # TestFrameworkBoilerplate
 The Boilerplate of the testing framework is mostly in C#.
 The main purpose is to speed up the test setup.
