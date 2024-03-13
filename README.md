@@ -11,6 +11,9 @@ This repo has been created as a part of the [#100commitow challenge](https://100
 ## How to start
 TBA
 
+## Project structure
+TBA
+
 ## Issues
 If you have any questions, issues, or improvements please leave a mark here [Issues](https://github.com/fszymaniak/TestFrameworkBoilerplate/issues)
 
