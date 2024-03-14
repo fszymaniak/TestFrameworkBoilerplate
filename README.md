@@ -24,5 +24,8 @@ If you have any questions, issues, or improvements please leave a mark here [Iss
 - [Create UI Test project](https://github.com/fszymaniak/TestFrameworkBoilerplate/milestone/4) - To Do
 - [Create Performance Test project](https://github.com/fszymaniak/TestFrameworkBoilerplate/milestone/5) - To Do
 
+## Configuration
+TBA 
+
 ## Links to tools
 - [Specflow github](https://github.com/SpecFlowOSS/SpecFlow)
