@@ -30,3 +30,5 @@ TBA
 
 ## Links to tools
 - [Specflow github](https://github.com/SpecFlowOSS/SpecFlow)
+- Autofac
+- WireMock
