@@ -30,5 +30,4 @@ TBA
 
 ## Links to tools
 - [Specflow github](https://github.com/SpecFlowOSS/SpecFlow)
-- Autofac
-- WireMock
+- [WireMock](https://github.com/WireMock-Net/WireMock.Net?tab=readme-ov-file#wiremocknet)
