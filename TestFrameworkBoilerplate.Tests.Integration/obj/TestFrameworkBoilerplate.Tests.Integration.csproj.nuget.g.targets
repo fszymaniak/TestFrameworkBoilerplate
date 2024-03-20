@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xunit.core\2.7.0\build\xunit.core.targets" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.7.0\build\xunit.core.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.text.json\7.0.3\buildTransitive\net6.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\7.0.3\buildTransitive\net6.0\System.Text.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.4\buildTransitive\Microsoft.CodeAnalysis.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.4\buildTransitive\Microsoft.CodeAnalysis.Analyzers.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow\4.0.31-beta\build\SpecFlow.targets" Condition="Exists('$(NuGetPackageRoot)specflow\4.0.31-beta\build\SpecFlow.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow.tools.msbuild.generation\4.0.31-beta\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('$(NuGetPackageRoot)specflow.tools.msbuild.generation\4.0.31-beta\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow.xunit\4.0.31-beta\build\SpecFlow.xUnit.targets" Condition="Exists('$(NuGetPackageRoot)specflow.xunit\4.0.31-beta\build\SpecFlow.xUnit.targets')" />
+    <Import Project="$(NuGetPackageRoot)solidtoken.specflow.dependencyinjection\4.0.0-preview.1\build\SolidToken.SpecFlow.DependencyInjection.targets" Condition="Exists('$(NuGetPackageRoot)solidtoken.specflow.dependencyinjection\4.0.0-preview.1\build\SolidToken.SpecFlow.DependencyInjection.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\17.7.1\build\netstandard2.0\Microsoft.CodeCoverage.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\17.7.1\build\netstandard2.0\Microsoft.CodeCoverage.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\17.7.1\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\17.7.1\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.targets')" />
+    <Import Project="$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets" Condition="Exists('$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets')" />
+  </ImportGroup>
+</Project>

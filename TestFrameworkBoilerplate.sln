@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B07772DC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFrameworkBoilerplate.Tests.WireMock", "TestFrameworkBoilerplate.Tests.WireMock\TestFrameworkBoilerplate.Tests.WireMock.csproj", "{B490A464-5333-4329-85EA-B7D36BDF7812}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFrameworkBoilerplate.Tests.Integration", "TestFrameworkBoilerplate.Tests.Integration\TestFrameworkBoilerplate.Tests.Integration.csproj", "{3C9C4300-01C1-46EE-BD6D-AC0A6E8C5E07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,11 +18,17 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{B490A464-5333-4329-85EA-B7D36BDF7812} = {B07772DC-F837-4241-8F2A-32D89124EC95}
+		{3C9C4300-01C1-46EE-BD6D-AC0A6E8C5E07} = {B07772DC-F837-4241-8F2A-32D89124EC95}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B490A464-5333-4329-85EA-B7D36BDF7812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B490A464-5333-4329-85EA-B7D36BDF7812}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B490A464-5333-4329-85EA-B7D36BDF7812}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B490A464-5333-4329-85EA-B7D36BDF7812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9C4300-01C1-46EE-BD6D-AC0A6E8C5E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9C4300-01C1-46EE-BD6D-AC0A6E8C5E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9C4300-01C1-46EE-BD6D-AC0A6E8C5E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9C4300-01C1-46EE-BD6D-AC0A6E8C5E07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

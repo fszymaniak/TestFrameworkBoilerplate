@@ -1,0 +1,21 @@
+﻿using RestSharp;
+
+namespace TestFrameworkBoilerplate.Tests.Integration.Drivers;
+
+public sealed class RestSharpDriver
+{
+    private RestClient _client;
+
+    public RestSharpDriver(IRestClient client)
+    {
+        _client = new RestClient("http://localhost:1010");
+    }
+
+    public async Task<RestResponse> GetAsync(string endpoint)
+    {
+        var request = new RestRequest(endpoint, Method.Get);
+        var response = await _client.ExecuteAsync(request);
+
+        return response;
+    }
+}

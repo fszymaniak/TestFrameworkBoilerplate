@@ -13,7 +13,7 @@ public class GetHttpStub
         _server = server;
     }
 
-    public void CreateHelloWorldStub()
+    public void CreateGetEndpointExampleStub()
     {
         _server.Given(
                 Request.Create().WithPath("/getEndpointExample").UsingGet()
