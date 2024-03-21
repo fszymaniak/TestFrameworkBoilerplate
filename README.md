@@ -32,3 +32,4 @@ TBA
 ## Links to tools
 - [Specflow github](https://github.com/SpecFlowOSS/SpecFlow)
 - [WireMock](https://github.com/WireMock-Net/WireMock.Net?tab=readme-ov-file#wiremocknet)
+- [RestSharp](https://restsharp.dev/intro#getting-started)
