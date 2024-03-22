@@ -3,6 +3,7 @@
 ![SpecFlow](https://img.shields.io/badge/SpecFlow-blue.svg?style=for-the-badge&logo=specflow&logoColor=white)
 ![WireMock](https://img.shields.io/badge/WireMock-orange?style=for-the-badge&logo=wiremock&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![RestSharp](https://img.shields.io/badge/RestSharp-darkgreen?style=for-the-badge&logo=restsharp&logoColor=white)
 
 # TestFrameworkBoilerplate
 The Boilerplate of the testing framework is mostly in C#.
