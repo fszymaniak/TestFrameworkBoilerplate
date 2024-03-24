@@ -5,7 +5,7 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![RestSharp](https://img.shields.io/badge/RestSharp-darkgreen?style=for-the-badge&logo=restsharp&logoColor=white)
 
-# TestFrameworkBoilerplate,
+# TestFrameworkBoilerplate
 The Boilerplate of the testing framework is mostly in C#.
 The main purpose is to speed up the test setup.
 
