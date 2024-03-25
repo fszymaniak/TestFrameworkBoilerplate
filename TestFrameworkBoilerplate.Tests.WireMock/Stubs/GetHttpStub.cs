@@ -1,6 +1,8 @@
-﻿using WireMock.RequestBuilders;
-using WireMock.ResponseBuilders;
+﻿using Microsoft.AspNetCore.Http;
+using TestFrameworkBoilerplate.Tests.WireMock.Constants;
+using WireMock.RequestBuilders;
 using WireMock.Server;
+using Response = WireMock.ResponseBuilders.Response;
 
 namespace TestFrameworkBoilerplate.Tests.WireMock.Stubs;
 
@@ -16,12 +18,12 @@ public class GetHttpStub
     public void CreateGetEndpointExampleStub()
     {
         _server.Given(
-                Request.Create().WithPath("/getEndpointExample").UsingGet()
+                Request.Create().WithPath(Endpoints.GetEndpointExample).UsingGet()
             )
             .RespondWith(
                 Response.Create()
-                    .WithStatusCode(200)
-                    .WithHeader("Content-Type", "text/plain")
+                    .WithStatusCode(StatusCodes.Status200OK)
+                    .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
                     .WithBody("getEndpointExample working fine!")
             );
     }
