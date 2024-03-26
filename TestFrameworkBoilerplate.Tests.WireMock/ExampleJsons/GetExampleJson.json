@@ -1,0 +1,22 @@
+[
+  {
+    "id": "136acb7d-b90f-4203-b705-7b9ace1aba33",
+    "type": "test1",
+    "attributes": {
+      "title": "test title 1",
+      "body": "test body 1",
+      "created": "2024-03-22T14:56:29.000Z",
+      "updated": "2024-03-22T14:56:28.000Z"
+    }
+  },
+  {
+    "id": "59097ef8-cec2-4eab-8f85-600e2a1bbc87",
+    "type": "test2",
+    "attributes": {
+      "title": "test title 2",
+      "body": "test body 2",
+      "created": "2024-03-22T14:56:29.000Z",
+      "updated": "2024-03-22T14:56:28.000Z"
+    }
+  }
+]

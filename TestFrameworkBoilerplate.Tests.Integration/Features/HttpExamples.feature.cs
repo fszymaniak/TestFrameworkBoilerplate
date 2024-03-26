@@ -110,7 +110,7 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         await testRunner.GivenAsync("the HTTP \'GET\' to the endpoint \'/getEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
-        await testRunner.ThenAsync("the result should be \'getEndpointExample working fine!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        await testRunner.ThenAsync("the result match expected json \'ExampleJsons\\\\GetExampleJson.json\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

@@ -18,4 +18,20 @@ public sealed class RestSharpDriver
 
         return response;
     }
+    
+    public async Task<RestResponse> GetAllAsync(string endpoint)
+    {
+        var request = new RestRequest(endpoint, Method.Get);
+        var response = await _client.ExecuteAsync(request);
+
+        return response;
+    }
+    
+    public async Task<RestResponse> PostAsync(string endpoint)
+    {
+        var request = new RestRequest(endpoint, Method.Post);
+        var response = await _client.ExecuteAsync(request);
+
+        return response;
+    }
 }

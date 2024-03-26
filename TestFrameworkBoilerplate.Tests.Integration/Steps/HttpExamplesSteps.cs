@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using RestSharp;
+using Shouldly;
 using TestFrameworkBoilerplate.Tests.Integration.Drivers;
 using TestFrameworkBoilerplate.Tests.Integration.Extensions;
 
@@ -24,12 +25,14 @@ public class HttpExamplesSteps
         _scenarioContext.SetHttpResponse(response);
     }
     
-    [Then(@"the result should be '(.*)'")]
-    public void ThenTheResultShouldBe(string expectedString)
+    [Then(@"the result match expected json '(.*)'")]
+    public void ThenTheResultShouldBe(string expectedJsonPath)
     {
         var response = _scenarioContext.GetHttpResponse();
         response.StatusCode.Equals(StatusCodes.Status200OK);
-        response.Content.Equals(expectedString);
+        
+        string jsonString = File.ReadAllText(expectedJsonPath);
+        response.Content.ShouldBe(jsonString);
     }
 
     private static Task<RestResponse> SelectRequest(string request, RestSharpDriver restSharpDriver, string endpoint) => request switch

@@ -25,6 +25,7 @@ public class GetHttpStub
                     .WithStatusCode(StatusCodes.Status200OK)
                     .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
                     .WithBody("getEndpointExample working fine!")
+                    .WithBodyFromFile("ExampleJsons\\GetExampleJson.json")
             );
     }
 }

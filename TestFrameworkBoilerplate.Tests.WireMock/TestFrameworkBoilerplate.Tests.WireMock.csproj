@@ -10,4 +10,10 @@
       <PackageReference Include="WireMock.Net" Version="1.5.49" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="ExampleJsons\GetExampleJson.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
