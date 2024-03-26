@@ -34,3 +34,6 @@ TBA
 - [Specflow github](https://github.com/SpecFlowOSS/SpecFlow)
 - [WireMock](https://github.com/WireMock-Net/WireMock.Net?tab=readme-ov-file#wiremocknet)
 - [RestSharp](https://restsharp.dev/intro#getting-started)
+
+## Learning materials
+- [SpecFlow Driver Pattern](https://docs.specflow.org/projects/specflow/en/latest/Guides/DriverPattern.html)
