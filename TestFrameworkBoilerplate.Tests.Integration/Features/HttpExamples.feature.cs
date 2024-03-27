@@ -90,13 +90,15 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
         [Xunit.TraitAttribute("Description", "Validate response from getEndpointExample endpoint")]
         [Xunit.TraitAttribute("Category", "HttpExample")]
+        [Xunit.TraitAttribute("Category", "Get")]
         public async System.Threading.Tasks.Task ValidateResponseFromGetEndpointExampleEndpoint()
         {
             string[] tagsOfScenario = new string[] {
-                    "HttpExample"};
+                    "HttpExample",
+                    "Get"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate response from getEndpointExample endpoint", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
+#line 6
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -106,11 +108,45 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
             else
             {
                 await this.ScenarioStartAsync();
-#line 6
+#line 7
         await testRunner.GivenAsync("the HTTP \'GET\' to the endpoint \'/getEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 7
-        await testRunner.ThenAsync("the result match expected json \'ExampleJsons\\\\GetExampleJson.json\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 8
+        await testRunner.ThenAsync("the result match expected json \'ExampleJsons\\\\GetExampleJson.json\' and status cod" +
+                        "e \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Send request to /postEndpointExample")]
+        [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
+        [Xunit.TraitAttribute("Description", "Send request to /postEndpointExample")]
+        [Xunit.TraitAttribute("Category", "HttpExample")]
+        [Xunit.TraitAttribute("Category", "Post")]
+        public async System.Threading.Tasks.Task SendRequestToPostEndpointExample()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "HttpExample",
+                    "Post"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Send request to /postEndpointExample", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 12
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 13
+        await testRunner.GivenAsync("the HTTP \'POST\' to the endpoint \'/postEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 14
+        await testRunner.ThenAsync("the result match expected json \'ExampleJsons\\\\PostExampleResponseJson.json\' and s" +
+                        "tatus code \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

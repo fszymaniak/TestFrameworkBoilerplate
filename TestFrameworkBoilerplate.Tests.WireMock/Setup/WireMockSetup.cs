@@ -6,12 +6,25 @@ namespace TestFrameworkBoilerplate.Tests.WireMock.Setup;
 public class WireMockSetup
 {
     private WireMockServer _server;
+    // private GetHttpStub _getHttpStub;
+    // private PostHttpStub _postHttpStub;
+    //
+    // public WireMockSetup()
+    // {
+    //     _getHttpStub = new GetHttpStub(_server);
+    //     _postHttpStub = new PostHttpStub(_server);
+    //
+    // }
 
     public void StartServer()
     {
         _server = WireMockServer.Start(1010);
+        
         var getHttpStub = new GetHttpStub(_server);
         getHttpStub.CreateGetEndpointExampleStub();
+        
+        var postHttpStub = new PostHttpStub(_server);
+        postHttpStub.CreatePostEndpointExampleStub();
     }
     
     public void StopServer()

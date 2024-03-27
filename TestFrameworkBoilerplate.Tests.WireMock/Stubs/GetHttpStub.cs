@@ -6,7 +6,7 @@ using Response = WireMock.ResponseBuilders.Response;
 
 namespace TestFrameworkBoilerplate.Tests.WireMock.Stubs;
 
-public class GetHttpStub
+public sealed class GetHttpStub
 {
     private readonly WireMockServer _server;
 
@@ -24,7 +24,6 @@ public class GetHttpStub
                 Response.Create()
                     .WithStatusCode(StatusCodes.Status200OK)
                     .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
-                    .WithBody("getEndpointExample working fine!")
                     .WithBodyFromFile("ExampleJsons\\GetExampleJson.json")
             );
     }

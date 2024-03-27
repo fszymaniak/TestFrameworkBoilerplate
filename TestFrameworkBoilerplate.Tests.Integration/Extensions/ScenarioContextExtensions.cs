@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿#nullable enable
+using RestSharp;
 
 namespace TestFrameworkBoilerplate.Tests.Integration.Extensions;
 

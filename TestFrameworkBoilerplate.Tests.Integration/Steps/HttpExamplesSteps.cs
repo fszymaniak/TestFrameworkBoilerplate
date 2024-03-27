@@ -25,21 +25,27 @@ public class HttpExamplesSteps
         _scenarioContext.SetHttpResponse(response);
     }
     
-    [Then(@"the result match expected json '(.*)'")]
-    public void ThenTheResultShouldBe(string expectedJsonPath)
+    [Then(@"the result match expected json '(.*)' and status code '(.*)'")]
+    public void ThenTheResultShouldBe(string expectedJsonPath, string statusCode)
     {
         var response = _scenarioContext.GetHttpResponse();
-        response.StatusCode.Equals(StatusCodes.Status200OK);
+        response.StatusCode.Equals(Int32.Parse(statusCode));
         
         string jsonString = File.ReadAllText(expectedJsonPath);
         response.Content.ShouldBe(jsonString);
+    }
+    
+    [Then(@"the result is created")]
+    public void ThenTheResultShouldBe()
+    {
+        var response = _scenarioContext.GetHttpResponse();
+        response.StatusCode.Equals(StatusCodes.Status201Created);
     }
 
     private static Task<RestResponse> SelectRequest(string request, RestSharpDriver restSharpDriver, string endpoint) => request switch
     {
         "GET" => restSharpDriver.GetAsync(endpoint),
+        "POST" => restSharpDriver.PostAsync(endpoint),
         _ => throw new ArgumentOutOfRangeException(nameof(request), $"Not expected http request: {request}")
     };
-
-   
 }
