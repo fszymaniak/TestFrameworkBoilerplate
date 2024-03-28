@@ -119,18 +119,18 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
             await this.ScenarioCleanupAsync();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Send request to /postEndpointExample")]
+        [Xunit.SkippableFactAttribute(DisplayName="Send request and validate response from postEndpointExample endpoint")]
         [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
-        [Xunit.TraitAttribute("Description", "Send request to /postEndpointExample")]
+        [Xunit.TraitAttribute("Description", "Send request and validate response from postEndpointExample endpoint")]
         [Xunit.TraitAttribute("Category", "HttpExample")]
         [Xunit.TraitAttribute("Category", "Post")]
-        public async System.Threading.Tasks.Task SendRequestToPostEndpointExample()
+        public async System.Threading.Tasks.Task SendRequestAndValidateResponseFromPostEndpointExampleEndpoint()
         {
             string[] tagsOfScenario = new string[] {
                     "HttpExample",
                     "Post"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Send request to /postEndpointExample", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Send request and validate response from postEndpointExample endpoint", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 12
     this.ScenarioInitialize(scenarioInfo);
 #line hidden

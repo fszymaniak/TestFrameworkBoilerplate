@@ -30,16 +30,6 @@ public sealed class RestSharpDriver
     
     public async Task<RestResponse> PostAsync(string endpoint)
     {
-        // var postBody = new JsonPostModel
-        // {
-        //     Type = "test1",
-        //     Attributes = new JsonAttributes()
-        //     {
-        //         Title = "test title 1",
-        //         Body = "test body 1"
-        //     }
-        // };
-        
         string jsonString = File.ReadAllText("ExampleJsons\\PostExampleRequestJson.json");
         
         var request = new RestRequest(endpoint, Method.Post);

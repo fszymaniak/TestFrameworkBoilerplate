@@ -9,7 +9,7 @@ Simple Http Examples
         
     @HttpExample
     @Post
-    Scenario: Send request to /postEndpointExample
+    Scenario: Send request and validate response from postEndpointExample endpoint
         Given the HTTP 'POST' to the endpoint '/postEndpointExample' is being send
         Then the result match expected json 'ExampleJsons\\PostExampleResponseJson.json' and status code '201'
         

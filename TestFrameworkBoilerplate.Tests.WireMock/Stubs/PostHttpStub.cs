@@ -18,18 +18,7 @@ public sealed class PostHttpStub
     
     public void CreatePostEndpointExampleStub()
     {
-        var postBody = new JsonPostModel
-        {
-            Type = "test1",
-            Attributes = new JsonAttributes()
-            {
-                Title = "test title 1",
-                Body = "test body 1"
-            }
-        };
-
         string jsonPath = "ExampleJsons\\PostExampleJson.json";
-        string jsonString = File.ReadAllText(jsonPath);
         
         _server.Given(
                 Request.Create().WithPath(Endpoints.PostEndpointExample)
