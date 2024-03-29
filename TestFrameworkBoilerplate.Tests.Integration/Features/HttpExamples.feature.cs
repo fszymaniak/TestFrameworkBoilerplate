@@ -19,41 +19,39 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class HttpExamplesFeature : object, Xunit.IClassFixture<HttpExamplesFeature.FixtureData>, System.IDisposable
+    [NUnit.Framework.TestFixtureAttribute()]
+    [NUnit.Framework.DescriptionAttribute("HttpExamples")]
+    public partial class HttpExamplesFeature
     {
         
-        private static TechTalk.SpecFlow.ITestRunner testRunner;
+        private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
-        
-        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
 #line 1 "HttpExamples.feature"
 #line hidden
         
-        public HttpExamplesFeature(HttpExamplesFeature.FixtureData fixtureData, TestFrameworkBoilerplate_Tests_Integration_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
-        {
-            this._testOutputHelper = testOutputHelper;
-            this.TestInitialize();
-        }
-        
-        public static void FeatureSetup()
+        [NUnit.Framework.OneTimeSetUpAttribute()]
+        public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "HttpExamples", "Simple Http Examples", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        public static void FeatureTearDown()
+        [NUnit.Framework.OneTimeTearDownAttribute()]
+        public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
+        [NUnit.Framework.SetUpAttribute()]
         public void TestInitialize()
         {
         }
         
+        [NUnit.Framework.TearDownAttribute()]
         public void TestTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -62,7 +60,7 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         public void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<NUnit.Framework.TestContext>(NUnit.Framework.TestContext.CurrentContext);
         }
         
         public void ScenarioStart()
@@ -75,16 +73,10 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
             testRunner.CollectScenarioErrors();
         }
         
-        void System.IDisposable.Dispose()
-        {
-            this.TestTearDown();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Validate response from getEndpointExample endpoint")]
-        [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
-        [Xunit.TraitAttribute("Description", "Validate response from getEndpointExample endpoint")]
-        [Xunit.TraitAttribute("Category", "HttpExample")]
-        [Xunit.TraitAttribute("Category", "GetAll")]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Validate response from getEndpointExample endpoint")]
+        [NUnit.Framework.CategoryAttribute("HttpExample")]
+        [NUnit.Framework.CategoryAttribute("GetAll")]
         public void ValidateResponseFromGetEndpointExampleEndpoint()
         {
             string[] tagsOfScenario = new string[] {
@@ -113,11 +105,10 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Validate response from getEndpointExample endpoint with single object")]
-        [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
-        [Xunit.TraitAttribute("Description", "Validate response from getEndpointExample endpoint with single object")]
-        [Xunit.TraitAttribute("Category", "HttpExample")]
-        [Xunit.TraitAttribute("Category", "GetSingle")]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Validate response from getEndpointExample endpoint with single object")]
+        [NUnit.Framework.CategoryAttribute("HttpExample")]
+        [NUnit.Framework.CategoryAttribute("GetSingle")]
         public void ValidateResponseFromGetEndpointExampleEndpointWithSingleObject()
         {
             string[] tagsOfScenario = new string[] {
@@ -147,11 +138,10 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Send request and validate response from postEndpointExample endpoint")]
-        [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
-        [Xunit.TraitAttribute("Description", "Send request and validate response from postEndpointExample endpoint")]
-        [Xunit.TraitAttribute("Category", "HttpExample")]
-        [Xunit.TraitAttribute("Category", "Post")]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Send request and validate response from postEndpointExample endpoint")]
+        [NUnit.Framework.CategoryAttribute("HttpExample")]
+        [NUnit.Framework.CategoryAttribute("Post")]
         public void SendRequestAndValidateResponseFromPostEndpointExampleEndpoint()
         {
             string[] tagsOfScenario = new string[] {
@@ -178,22 +168,6 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
 #line hidden
             }
             this.ScenarioCleanup();
-        }
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
-        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        public class FixtureData : System.IDisposable
-        {
-            
-            public FixtureData()
-            {
-                HttpExamplesFeature.FeatureSetup();
-            }
-            
-            void System.IDisposable.Dispose()
-            {
-                HttpExamplesFeature.FeatureTearDown();
-            }
         }
     }
 }
