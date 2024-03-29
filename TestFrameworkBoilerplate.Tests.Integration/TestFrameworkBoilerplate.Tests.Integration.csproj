@@ -45,6 +45,9 @@
       <None Update="ExampleJsons\PostExampleRequestJson.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="ExampleJsons\GetSingleExampleJson.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

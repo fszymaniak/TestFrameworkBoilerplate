@@ -2,10 +2,16 @@
 Simple Http Examples
 
     @HttpExample
-    @Get
+    @GetAll
     Scenario: Validate response from getEndpointExample endpoint
         Given the HTTP 'GET' to the endpoint '/getEndpointExample' is being send
         Then the result match expected json 'ExampleJsons\\GetExampleJson.json' and status code '200'
+    
+    @HttpExample
+    @GetSingle
+    Scenario: Validate response from getEndpointExample endpoint with single object
+        Given the HTTP 'GET' to the endpoint '/getEndpointExample/136acb7d-b90f-4203-b705-7b9ace1aba33' is being send
+        Then the result match expected json 'ExampleJsons\\GetSingleExampleJson.json' and status code '200'
         
     @HttpExample
     @Post

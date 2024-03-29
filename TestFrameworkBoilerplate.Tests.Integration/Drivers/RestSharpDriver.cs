@@ -1,5 +1,4 @@
 ﻿using RestSharp;
-using TestFrameworkBoilerplate.Tests.Integration.Models;
 
 namespace TestFrameworkBoilerplate.Tests.Integration.Drivers;
 
@@ -13,14 +12,6 @@ public sealed class RestSharpDriver
     }
 
     public async Task<RestResponse> GetAsync(string endpoint)
-    {
-        var request = new RestRequest(endpoint, Method.Get);
-        var response = await _client.ExecuteAsync(request);
-
-        return response;
-    }
-    
-    public async Task<RestResponse> GetAllAsync(string endpoint)
     {
         var request = new RestRequest(endpoint, Method.Get);
         var response = await _client.ExecuteAsync(request);

@@ -22,6 +22,7 @@ public class WireMockSetup
         
         var getHttpStub = new GetHttpStub(_server);
         getHttpStub.CreateGetEndpointExampleStub();
+        getHttpStub.CreateGetSingleObjectEndpointExampleStub();
         
         var postHttpStub = new PostHttpStub(_server);
         postHttpStub.CreatePostEndpointExampleStub();

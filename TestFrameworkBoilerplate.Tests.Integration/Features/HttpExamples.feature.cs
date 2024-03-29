@@ -90,12 +90,12 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
         [Xunit.TraitAttribute("Description", "Validate response from getEndpointExample endpoint")]
         [Xunit.TraitAttribute("Category", "HttpExample")]
-        [Xunit.TraitAttribute("Category", "Get")]
+        [Xunit.TraitAttribute("Category", "GetAll")]
         public async System.Threading.Tasks.Task ValidateResponseFromGetEndpointExampleEndpoint()
         {
             string[] tagsOfScenario = new string[] {
                     "HttpExample",
-                    "Get"};
+                    "GetAll"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate response from getEndpointExample endpoint", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
@@ -119,6 +119,40 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
             await this.ScenarioCleanupAsync();
         }
         
+        [Xunit.SkippableFactAttribute(DisplayName="Validate response from getEndpointExample endpoint with single object")]
+        [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
+        [Xunit.TraitAttribute("Description", "Validate response from getEndpointExample endpoint with single object")]
+        [Xunit.TraitAttribute("Category", "HttpExample")]
+        [Xunit.TraitAttribute("Category", "GetSingle")]
+        public async System.Threading.Tasks.Task ValidateResponseFromGetEndpointExampleEndpointWithSingleObject()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "HttpExample",
+                    "GetSingle"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate response from getEndpointExample endpoint with single object", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 12
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 13
+        await testRunner.GivenAsync("the HTTP \'GET\' to the endpoint \'/getEndpointExample/136acb7d-b90f-4203-b705-7b9ac" +
+                        "e1aba33\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 14
+        await testRunner.ThenAsync("the result match expected json \'ExampleJsons\\\\GetSingleExampleJson.json\' and stat" +
+                        "us code \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
         [Xunit.SkippableFactAttribute(DisplayName="Send request and validate response from postEndpointExample endpoint")]
         [Xunit.TraitAttribute("FeatureTitle", "HttpExamples")]
         [Xunit.TraitAttribute("Description", "Send request and validate response from postEndpointExample endpoint")]
@@ -131,7 +165,7 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
                     "Post"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Send request and validate response from postEndpointExample endpoint", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
+#line 18
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -141,10 +175,10 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
             else
             {
                 await this.ScenarioStartAsync();
-#line 13
+#line 19
         await testRunner.GivenAsync("the HTTP \'POST\' to the endpoint \'/postEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
+#line 20
         await testRunner.ThenAsync("the result match expected json \'ExampleJsons\\\\PostExampleResponseJson.json\' and s" +
                         "tatus code \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

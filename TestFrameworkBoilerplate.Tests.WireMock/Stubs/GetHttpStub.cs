@@ -27,4 +27,17 @@ public sealed class GetHttpStub
                     .WithBodyFromFile("ExampleJsons\\GetExampleJson.json")
             );
     }
+    
+    public void CreateGetSingleObjectEndpointExampleStub()
+    {
+        _server.Given(
+                Request.Create().WithPath(Endpoints.GetSingleObjectEndpointExample).UsingGet()
+            )
+            .RespondWith(
+                Response.Create()
+                    .WithStatusCode(StatusCodes.Status200OK)
+                    .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
+                    .WithBodyFromFile("ExampleJsons\\GetSingleExampleJson.json")
+            );
+    }
 }
