@@ -13,9 +13,10 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1"/>
         <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.16" />
         <PackageReference Include="Shouldly" Version="4.2.1" />
-        <PackageReference Include="SolidToken.SpecFlow.DependencyInjection" Version="4.0.0-preview.1" />
-        <PackageReference Include="SpecFlow" Version="4.0.31-beta" />
-        <PackageReference Include="SpecFlow.xUnit" Version="4.0.31-beta" />
+        <PackageReference Include="SolidToken.SpecFlow.DependencyInjection" Version="3.9.3" />
+        <PackageReference Include="SpecFlow" Version="3.9.74" />
+        <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+        <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
         <PackageReference Include="xunit" Version="2.7.0" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
