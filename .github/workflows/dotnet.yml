@@ -35,6 +35,6 @@ jobs:
       - name: Run SpecFlow Tests  
         uses: cryptic-wizard/run-specflow-tests@v1.3.3
         with:
-          test-assembly-path: TestFrameworkBoilerplate/TestFrameworkBoilerplate.Tests.Integration/bin/Release/net7.0
+          test-assembly-path: TestFrameworkBoilerplate.Tests.Integration/bin/Debug/net7.0
           test-assembly-dll: TestFrameworkBoilerplate.Tests.Integration.dll
           output-html: MyTestResults.html
