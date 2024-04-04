@@ -1,7 +1,4 @@
-﻿using RestSharp;
-using TestFrameworkBoilerplate.Tests.Integration.Drivers;
-
-namespace TestFrameworkBoilerplate.Tests.Integration.Support;
+﻿namespace TestFrameworkBoilerplate.Tests.Integration.Support;
 
 public static class DependenciesSetup
 {

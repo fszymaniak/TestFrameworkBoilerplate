@@ -1,7 +1,4 @@
-﻿using TestFrameworkBoilerplate.Tests.Integration.Drivers;
-using WireMock.Server;
-
-namespace TestFrameworkBoilerplate.Tests.Integration.Hooks;
+﻿namespace TestFrameworkBoilerplate.Tests.Integration.Hooks;
 
 [Binding]
 public sealed class Setup

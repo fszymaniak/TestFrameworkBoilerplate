@@ -1,6 +1,4 @@
-﻿using TestFrameworkBoilerplate.Tests.WireMock.Setup;
-
-namespace TestFrameworkBoilerplate.Tests.Integration.Drivers;
+﻿namespace TestFrameworkBoilerplate.Tests.Integration.Drivers;
 
 public sealed class WireMockDriver
 {

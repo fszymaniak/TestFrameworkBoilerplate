@@ -1,6 +1,4 @@
 ﻿#nullable enable
-using RestSharp;
-
 namespace TestFrameworkBoilerplate.Tests.Integration.Extensions;
 
 public static class ScenarioContextExtensions

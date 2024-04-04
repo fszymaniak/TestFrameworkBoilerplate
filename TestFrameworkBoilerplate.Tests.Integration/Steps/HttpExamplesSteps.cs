@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using RestSharp;
-using Shouldly;
-using TestFrameworkBoilerplate.Tests.Integration.Drivers;
-using TestFrameworkBoilerplate.Tests.Integration.Extensions;
-
-namespace TestFrameworkBoilerplate.Tests.Integration.Steps;
+﻿namespace TestFrameworkBoilerplate.Tests.Integration.Steps;
 
 [Binding]
 public class HttpExamplesSteps
