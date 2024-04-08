@@ -12,4 +12,6 @@ public sealed class WireMockDriver
     public void WireMockStartServer() => _wireMockSetup.StartServer();
     
     public void WireMockEndServer() => _wireMockSetup.StopServer();
+
+    public string GetUrl() => _wireMockSetup.GetWireMockUrl();
 }

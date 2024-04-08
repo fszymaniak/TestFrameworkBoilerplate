@@ -18,7 +18,7 @@ public class WireMockSetup : IWireMockSetup
 
     public void StartServer()
     {
-        _server = WireMockServer.Start(1010);
+        _server = WireMockServer.Start();
         
         var getHttpStub = new GetHttpStub(_server);
         getHttpStub.CreateGetEndpointExampleStub();
@@ -31,5 +31,10 @@ public class WireMockSetup : IWireMockSetup
     public void StopServer()
     {
         _server.Stop();
+    }
+
+    public string GetWireMockUrl()
+    {
+        return _server.Urls[0];
     }
 }

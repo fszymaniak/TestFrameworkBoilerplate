@@ -3,10 +3,12 @@
 public sealed class RestSharpDriver
 {
     private IRestClient _client;
+    private WireMockDriver _wireMockDriver;
 
-    public RestSharpDriver(IRestClient client)
+    public RestSharpDriver(IRestClient client, WireMockDriver wireMockDriver)
     {
-        _client = new RestClient("http://localhost:1010");
+        _wireMockDriver = wireMockDriver;
+        _client = new RestClient(_wireMockDriver.GetUrl());
     }
 
     public async Task<RestResponse> GetAsync(string endpoint)
@@ -14,6 +16,7 @@ public sealed class RestSharpDriver
         var request = new RestRequest(endpoint, Method.Get);
         var response = await _client.ExecuteAsync(request);
 
+        var a = _wireMockDriver.GetUrl();
         return response;
     }
     
