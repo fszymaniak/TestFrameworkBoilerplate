@@ -3,7 +3,7 @@ using WireMock.Server;
 
 namespace TestFrameworkBoilerplate.Tests.WireMock.Setup;
 
-public class WireMockSetup
+public class WireMockSetup : IWireMockSetup
 {
     private WireMockServer _server;
     // private GetHttpStub _getHttpStub;

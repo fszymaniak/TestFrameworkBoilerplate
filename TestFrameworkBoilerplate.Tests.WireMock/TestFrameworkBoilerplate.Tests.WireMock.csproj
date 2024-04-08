@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="SpecFlow.Autofac" Version="3.9.74" />
       <PackageReference Include="WireMock.Net" Version="1.5.49" />
     </ItemGroup>
 

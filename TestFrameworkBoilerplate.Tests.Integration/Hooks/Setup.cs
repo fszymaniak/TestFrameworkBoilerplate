@@ -4,7 +4,7 @@
 public sealed class Setup
 {
     private readonly WireMockDriver _wireMockDriver;
-
+    
     public Setup(WireMockDriver wireMockDriver)
     {
         _wireMockDriver = wireMockDriver;

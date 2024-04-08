@@ -2,7 +2,7 @@
 
 public sealed class RestSharpDriver
 {
-    private RestClient _client;
+    private IRestClient _client;
 
     public RestSharpDriver(IRestClient client)
     {
