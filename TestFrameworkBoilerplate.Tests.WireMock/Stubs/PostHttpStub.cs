@@ -1,26 +1,18 @@
 ﻿using Microsoft.AspNetCore.Http;
 using TestFrameworkBoilerplate.Tests.WireMock.Constants;
-using TestFrameworkBoilerplate.Tests.WireMock.Models;
 using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
 using WireMock.Server;
 
 namespace TestFrameworkBoilerplate.Tests.WireMock.Stubs;
 
-public sealed class PostHttpStub
+public static class PostHttpStub
 {
-    private readonly WireMockServer _server;
-
-    public PostHttpStub(WireMockServer server)
+    public static void CreatePostEndpointExampleStub(this WireMockServer server)
     {
-        _server = server;
-    }
-    
-    public void CreatePostEndpointExampleStub()
-    {
-        string jsonPath = "ExampleJsons\\PostExampleJson.json";
+        string jsonPath = "WiremockExampleJsons\\PostExampleJson.json";
         
-        _server.Given(
+        server.Given(
                 Request.Create().WithPath(Endpoints.PostEndpointExample)
                     .UsingPost()
             )

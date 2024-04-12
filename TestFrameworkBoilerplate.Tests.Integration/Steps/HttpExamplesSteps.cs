@@ -1,15 +1,20 @@
-﻿namespace TestFrameworkBoilerplate.Tests.Integration.Steps;
+﻿using Microsoft.Extensions.Options;
+using TestFrameworkBoilerplate.Tests.Integration.Configuration;
+
+namespace TestFrameworkBoilerplate.Tests.Integration.Steps;
 
 [Binding]
 public class HttpExamplesSteps
 {
     private readonly RestSharpDriver _restSharpDriver;
     private readonly ScenarioContext _scenarioContext;
+    private readonly IOptions<DirectoryPathSettings> _directoryPathSettings;
 
-    public HttpExamplesSteps(RestSharpDriver restSharpDriver, ScenarioContext scenarioContext)
+    public HttpExamplesSteps(RestSharpDriver restSharpDriver, ScenarioContext scenarioContext, IOptions<DirectoryPathSettings> directoryPathSettings)
     {
         _restSharpDriver = restSharpDriver;
         _scenarioContext = scenarioContext;
+        _directoryPathSettings = directoryPathSettings;
     }
 
     [Given(@"the HTTP '(.*)' to the endpoint '(.*)' is being send")]
@@ -20,12 +25,13 @@ public class HttpExamplesSteps
     }
     
     [Then(@"the result match expected json '(.*)' and status code '(.*)'")]
-    public void ThenTheResultShouldBe(string expectedJsonPath, string statusCode)
+    public void ThenTheResultShouldBe(string expectedJsonName, string statusCode)
     {
         var response = _scenarioContext.GetHttpResponse();
         response.StatusCode.Equals(Int32.Parse(statusCode));
-        
-        string jsonString = File.ReadAllText(expectedJsonPath);
+
+        string path = Path.Combine(_directoryPathSettings.Value.ExpectedExampleJsonDirectory, expectedJsonName);
+        string jsonString = File.ReadAllText(path);
         response.Content.ShouldBe(jsonString);
     }
     

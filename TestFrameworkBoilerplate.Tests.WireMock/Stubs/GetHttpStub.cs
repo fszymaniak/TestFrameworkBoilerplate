@@ -6,38 +6,31 @@ using Response = WireMock.ResponseBuilders.Response;
 
 namespace TestFrameworkBoilerplate.Tests.WireMock.Stubs;
 
-public sealed class GetHttpStub
+public static class GetHttpStub
 {
-    private readonly WireMockServer _server;
-
-    public GetHttpStub(WireMockServer server)
+    public static void CreateGetEndpointExampleStub(this WireMockServer server)
     {
-        _server = server;
-    }
-
-    public void CreateGetEndpointExampleStub()
-    {
-        _server.Given(
+        server.Given(
                 Request.Create().WithPath(Endpoints.GetEndpointExample).UsingGet()
             )
             .RespondWith(
                 Response.Create()
                     .WithStatusCode(StatusCodes.Status200OK)
                     .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
-                    .WithBodyFromFile("ExampleJsons\\GetExampleJson.json")
+                    .WithBodyFromFile("WiremockExampleJsons\\GetExampleJson.json")
             );
     }
     
-    public void CreateGetSingleObjectEndpointExampleStub()
+    public static void CreateGetSingleObjectEndpointExampleStub(this WireMockServer server)
     {
-        _server.Given(
+        server.Given(
                 Request.Create().WithPath(Endpoints.GetSingleObjectEndpointExample).UsingGet()
             )
             .RespondWith(
                 Response.Create()
                     .WithStatusCode(StatusCodes.Status200OK)
                     .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
-                    .WithBodyFromFile("ExampleJsons\\GetSingleExampleJson.json")
+                    .WithBodyFromFile("WiremockExampleJsons\\GetSingleExampleJson.json")
             );
     }
 }

@@ -98,8 +98,7 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         testRunner.Given("the HTTP \'GET\' to the endpoint \'/getEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
-        testRunner.Then("the result match expected json \'ExampleJsons\\\\GetExampleJson.json\' and status cod" +
-                        "e \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the result match expected json \'GetExampleJson.json\' and status code \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -131,8 +130,7 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
                         "e1aba33\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 14
-        testRunner.Then("the result match expected json \'ExampleJsons\\\\GetSingleExampleJson.json\' and stat" +
-                        "us code \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the result match expected json \'GetSingleExampleJson.json\' and status code \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -163,8 +161,8 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         testRunner.Given("the HTTP \'POST\' to the endpoint \'/postEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 20
-        testRunner.Then("the result match expected json \'ExampleJsons\\\\PostExampleResponseJson.json\' and s" +
-                        "tatus code \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the result match expected json \'PostExampleResponseJson.json\' and status code \'20" +
+                        "1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
