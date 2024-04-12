@@ -30,7 +30,7 @@ public class HttpExamplesSteps
         var response = _scenarioContext.GetHttpResponse();
         response.StatusCode.Equals(Int32.Parse(statusCode));
 
-        string path = Path.Combine(_directoryPathSettings.Value.ExpectedExampleJsonDirectory, expectedJsonName);
+        string path = Path.Join(_directoryPathSettings.Value.ExpectedExampleJsonDirectory, expectedJsonName);
         string jsonString = File.ReadAllText(path);
         response.Content.ShouldBe(jsonString);
     }
