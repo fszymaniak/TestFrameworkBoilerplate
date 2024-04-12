@@ -31,6 +31,11 @@ public class HttpExamplesSteps
         response.StatusCode.Equals(Int32.Parse(statusCode));
 
         string path = Path.Join(_directoryPathSettings.Value.ExpectedExampleJsonDirectory, expectedJsonName);
+        if (!OperatingSystem.IsWindows())
+        {
+            path = path.Replace(@"\", "/");
+        }
+        
         string jsonString = File.ReadAllText(path);
         response.Content.ShouldBe(jsonString);
     }
