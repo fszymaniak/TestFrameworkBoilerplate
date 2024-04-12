@@ -30,12 +30,7 @@ public class HttpExamplesSteps
         var response = _scenarioContext.GetHttpResponse();
         response.StatusCode.Equals(Int32.Parse(statusCode));
 
-        string path = Path.Join(_directoryPathSettings.Value.ExpectedExampleJsonDirectory, expectedJsonName);
-        if (OperatingSystem.IsLinux())
-        {
-            path = path.Replace(@"\", "/");
-            Console.WriteLine($@"I WAS IN THE IS LINUX CONDITION: {path}");
-        }
+        string path = Path.Combine(_directoryPathSettings.Value.ExpectedExampleJsonDirectory, expectedJsonName);
         
         string jsonString = File.ReadAllText(path);
         response.Content.ShouldBe(jsonString);

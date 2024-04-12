@@ -29,11 +29,6 @@ public static class DependenciesSetup
         // Setup 
         containerBuilder.RegisterType<Setup>();
         
-        // Drivers
-        containerBuilder.RegisterType<WireMockDriver>();
-        containerBuilder.RegisterType<RestClient>().As<IRestClient>();
-        containerBuilder.RegisterType<RestSharpDriver>();
-
         // Options
         var settings = new Settings();
         var directoryPathSettings = new DirectoryPathSettings();
@@ -56,6 +51,11 @@ public static class DependenciesSetup
             .SingleInstance();
         containerBuilder.Register(c => c.Resolve<IOptions<DirectoryPathSettings>>().Value).AsImplementedInterfaces()
             .SingleInstance();
+        
+        // Drivers
+        containerBuilder.RegisterType<WireMockDriver>();
+        containerBuilder.RegisterType<RestClient>().As<IRestClient>();
+        containerBuilder.RegisterType<RestSharpDriver>();
         
         // Steps
         containerBuilder.RegisterType<HttpExamplesSteps>().AsSelf();
