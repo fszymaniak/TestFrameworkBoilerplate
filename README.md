@@ -40,3 +40,4 @@ TBA
 
 ## Learning materials
 - [SpecFlow Driver Pattern](https://docs.specflow.org/projects/specflow/en/latest/Guides/DriverPattern.html)
+- [SpecFlow with Autofac](https://docs.specflow.org/projects/specflow/en/latest/Integrations/Autofac.html)
