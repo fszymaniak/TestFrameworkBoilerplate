@@ -7,6 +7,7 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![RestSharp](https://img.shields.io/badge/RestSharp-darkgreen?style=for-the-badge&logo=restsharp&logoColor=white)
 ![Actions](https://img.shields.io/badge/Actions-darkred.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Autofac](https://img.shields.io/badge/Autofac-lightgreen.svg?style=for-the-badge&logo=autofac&logoColor=white)
 
 # TestFrameworkBoilerplate,
 The Boilerplate of the testing framework is mostly in C#.
