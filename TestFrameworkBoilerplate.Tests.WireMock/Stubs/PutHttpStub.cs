@@ -6,19 +6,19 @@ using WireMock.Server;
 
 namespace TestFrameworkBoilerplate.Tests.WireMock.Stubs;
 
-public static class PostHttpStub
+public static class PutHttpStub
 {
-    public static void CreatePostEndpointExampleStub(this WireMockServer server)
+    public static void CreatePutEndpointExampleStub(this WireMockServer server)
     {
         server.Given(
-                Request.Create().WithPath(Endpoints.PostEndpointExample)
-                    .UsingPost()
+                Request.Create().WithPath(Endpoints.PutEndpointExample)
+                    .UsingPut()
             )
             .RespondWith(
                 Response.Create()
                     .WithStatusCode(StatusCodes.Status201Created)
                     .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
-                    .WithBodyFromFile(JsonPaths.PostJsonPath)
+                    .WithBodyFromFile(JsonPaths.PutJsonPath)
             );
     }
 }

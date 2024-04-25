@@ -12,13 +12,16 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="WiremockExampleJsons\GetExampleJson.json">
+      <None Update="WiremockExampleJsons\GetExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="WiremockExampleJsons\PostExampleJson.json">
+      <None Update="WiremockExampleJsons\PostExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="WiremockExampleJsons\GetSingleExampleJson.json">
+      <None Update="WiremockExampleJsons\GetSingleExampleResponse.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="WiremockExampleJsons\PutExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

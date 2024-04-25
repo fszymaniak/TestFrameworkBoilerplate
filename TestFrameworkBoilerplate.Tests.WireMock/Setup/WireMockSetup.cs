@@ -14,6 +14,7 @@ public class WireMockSetup : IWireMockSetup
         _server.CreateGetEndpointExampleStub();
         _server.CreateGetSingleObjectEndpointExampleStub();
         _server.CreatePostEndpointExampleStub();
+        _server.CreatePutEndpointExampleStub();
     }
     
     public void StopServer()

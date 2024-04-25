@@ -1,0 +1,9 @@
+[
+  {
+    "type": "test1_updated",
+    "attributes": {
+      "title": "test title 1 updated",
+      "body": "test body 1 updated"
+    }
+  }
+]

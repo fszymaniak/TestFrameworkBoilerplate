@@ -46,7 +46,8 @@ public class HttpExamplesSteps
     private static Task<RestResponse> SelectRequest(string request, RestSharpDriver restSharpDriver, string endpoint) => request switch
     {
         "GET" => restSharpDriver.GetAsync(endpoint),
-        "POST" => restSharpDriver.PostAsync(endpoint),
+        "POST" => restSharpDriver.PostAsync(endpoint, request),
+        "PUT" => restSharpDriver.PutAsync(endpoint, request),
         _ => throw new ArgumentOutOfRangeException(nameof(request), $"Not expected http request: {request}")
     };
 }

@@ -34,19 +34,25 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="ExampleJsons\GetExampleJson.json">
+      <None Update="ExampleJsons\GetExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="ExampleJsons\PostExampleResponseJson.json">
+      <None Update="ExampleJsons\PostExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="ExampleJsons\PostExampleRequestJson.json">
+      <None Update="ExampleJsons\PostExampleRequest.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="ExampleJsons\GetSingleExampleJson.json">
+      <None Update="ExampleJsons\GetSingleExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="ExampleJsons\PutExampleRequest.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="ExampleJsons\PutExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

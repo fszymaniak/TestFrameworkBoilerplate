@@ -98,7 +98,7 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         testRunner.Given("the HTTP \'GET\' to the endpoint \'/getEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
-        testRunner.Then("the result match expected json \'GetExampleJson.json\' and status code \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the result match expected json \'GetExampleResponse.json\' and status code \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -130,7 +130,8 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
                         "e1aba33\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 14
-        testRunner.Then("the result match expected json \'GetSingleExampleJson.json\' and status code \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the result match expected json \'GetSingleExampleResponse.json\' and status code \'2" +
+                        "00\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -161,8 +162,39 @@ namespace TestFrameworkBoilerplate.Tests.Integration.Features
         testRunner.Given("the HTTP \'POST\' to the endpoint \'/postEndpointExample\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 20
-        testRunner.Then("the result match expected json \'PostExampleResponseJson.json\' and status code \'20" +
-                        "1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the result match expected json \'PostExampleResponse.json\' and status code \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Send request and validate response from putEndpointExample endpoint")]
+        [NUnit.Framework.CategoryAttribute("HttpExample")]
+        [NUnit.Framework.CategoryAttribute("Put")]
+        public void SendRequestAndValidateResponseFromPutEndpointExampleEndpoint()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "HttpExample",
+                    "Put"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Send request and validate response from putEndpointExample endpoint", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 24
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 25
+        testRunner.Given("the HTTP \'PUT\' to the endpoint \'/putEndpointExample/136acb7d-b90f-4203-b705-7b9ac" +
+                        "e1aba33\' is being send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 26
+        testRunner.Then("the result match expected json \'PutExampleResponse.json\' and status code \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

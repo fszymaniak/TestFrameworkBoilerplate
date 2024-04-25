@@ -17,7 +17,7 @@ public static class GetHttpStub
                 Response.Create()
                     .WithStatusCode(StatusCodes.Status200OK)
                     .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
-                    .WithBodyFromFile("WiremockExampleJsons\\GetExampleJson.json")
+                    .WithBodyFromFile(JsonPaths.GetAllJsonPath)
             );
     }
     
@@ -30,7 +30,7 @@ public static class GetHttpStub
                 Response.Create()
                     .WithStatusCode(StatusCodes.Status200OK)
                     .WithHeader(ResponseConstants.Header.ContentType, ResponseConstants.Header.ApplicationType)
-                    .WithBodyFromFile("WiremockExampleJsons\\GetSingleExampleJson.json")
+                    .WithBodyFromFile(JsonPaths.GetSingleJsonPath)
             );
     }
 }
