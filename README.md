@@ -34,10 +34,12 @@ If you have any questions, issues, or improvements please leave a mark here [Iss
 ## Configuration
 TBA 
 
-## Links to tools
+## Links to tools documentation
 - [Specflow github](https://github.com/SpecFlowOSS/SpecFlow)
+- [SpecFlow Getting Started](https://docs.specflow.org/projects/getting-started/en/latest/)
 - [WireMock](https://github.com/WireMock-Net/WireMock.Net?tab=readme-ov-file#wiremocknet)
 - [RestSharp](https://restsharp.dev/intro#getting-started)
+- [Autofac](https://autofac.readthedocs.io/en/latest/)
 
 ## Learning materials
 - [SpecFlow Driver Pattern](https://docs.specflow.org/projects/specflow/en/latest/Guides/DriverPattern.html)
