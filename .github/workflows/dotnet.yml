@@ -10,6 +10,11 @@ on:
     branches: ["main", "develop"]
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 jobs:
   build-and-test:
     runs-on: ${{ matrix.os }}
@@ -78,6 +83,7 @@ jobs:
 
       - name: Publish Test Report
         if: always() && matrix.os == 'ubuntu-latest'
+        continue-on-error: true  # Don't fail workflow if check run creation fails
         uses: dorny/test-reporter@v1
         with:
           name: Test Results (Ubuntu)
@@ -120,13 +126,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - name: Setup NuGet
+        uses: nuget/setup-nuget@v2
         with:
-          dotnet-version: '8.0.x'
+          nuget-version: 'latest'
 
       - name: Pack template as NuGet package
-        run: dotnet pack -c Release -o ./artifacts
+        run: nuget pack TestFrameworkBoilerplate.Template.nuspec -Version 1.0.${{ github.run_number }} -OutputDirectory ./artifacts
 
       - name: Upload template package
         uses: actions/upload-artifact@v4
