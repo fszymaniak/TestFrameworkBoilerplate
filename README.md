@@ -1,6 +1,6 @@
 ![Build](https://github.com/fszymaniak/TestFrameworkBoilerplate/actions/workflows/dotnet.yml/badge.svg?branch=main)
 
-![DotNet](https://img.shields.io/badge/-.NET%207.0-darkviolet?style=for-the-badge&logo=.net&logoColor=white)
+![DotNet](https://img.shields.io/badge/-.NET%208.0-darkviolet?style=for-the-badge&logo=.net&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![SpecFlow](https://img.shields.io/badge/SpecFlow-blue.svg?style=for-the-badge&logo=specflow&logoColor=white)
 ![WireMock](https://img.shields.io/badge/WireMock-orange?style=for-the-badge&logo=wiremock&logoColor=white)

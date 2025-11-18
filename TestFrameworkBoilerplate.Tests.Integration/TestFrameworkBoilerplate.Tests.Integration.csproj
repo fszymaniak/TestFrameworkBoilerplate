@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>disable</Nullable>
 
@@ -10,16 +10,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1"/>
-        <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
-        <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.16" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1"/>
+        <PackageReference Include="NUnit" Version="4.2.2" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+        <PackageReference Include="RestSharp" Version="112.1.0" />
         <PackageReference Include="Shouldly" Version="4.2.1" />
         <PackageReference Include="SpecFlow" Version="3.9.74" />
         <PackageReference Include="SpecFlow.Autofac" Version="3.9.74" />
         <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
         <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
-        <PackageReference Include="coverlet.collector" Version="3.2.0">
+        <PackageReference Include="coverlet.collector" Version="6.0.2">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>

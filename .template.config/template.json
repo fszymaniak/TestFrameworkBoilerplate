@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Filip Szymaniak",
+  "classifications": [
+    "Test",
+    "Integration",
+    "SpecFlow",
+    "WireMock",
+    "BDD",
+    "API Testing"
+  ],
+  "identity": "TestFrameworkBoilerplate.Template",
+  "name": "Test Framework Boilerplate",
+  "shortName": "testfw",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "TestFrameworkBoilerplate",
+  "preferNameDirectory": true,
+  "symbols": {
+    "TestType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "integration",
+          "description": "Integration tests with WireMock and RestSharp"
+        },
+        {
+          "choice": "contract",
+          "description": "Contract tests (Future: Pact support)"
+        },
+        {
+          "choice": "ui",
+          "description": "UI tests (Future: Selenium/Playwright)"
+        },
+        {
+          "choice": "performance",
+          "description": "Performance tests (Future: NBomber/K6)"
+        }
+      ],
+      "defaultValue": "integration",
+      "description": "The type of test framework to scaffold"
+    },
+    "TargetFramework": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net8.0",
+          "description": ".NET 8.0 (LTS - Recommended)"
+        },
+        {
+          "choice": "net9.0",
+          "description": ".NET 9.0 (Latest)"
+        }
+      ],
+      "defaultValue": "net8.0",
+      "replaces": "net7.0",
+      "description": "Target framework version"
+    },
+    "UseWireMock": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include WireMock project for HTTP mocking"
+    },
+    "UseSpecFlow": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Use SpecFlow for BDD-style scenarios"
+    },
+    "TestRunner": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "NUnit",
+          "description": "NUnit test framework (Default)"
+        },
+        {
+          "choice": "xUnit",
+          "description": "xUnit test framework"
+        },
+        {
+          "choice": "MSTest",
+          "description": "MSTest framework"
+        }
+      ],
+      "defaultValue": "NUnit",
+      "description": "Test runner framework to use"
+    },
+    "IncludeExamples": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include example features, steps, and test data"
+    },
+    "IncludeGitHubActions": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include GitHub Actions CI/CD workflow"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!UseWireMock)",
+          "exclude": [
+            "TestFrameworkBoilerplate.Tests.WireMock/**/*"
+          ]
+        },
+        {
+          "condition": "(!IncludeExamples)",
+          "exclude": [
+            "**/ExampleJsons/**",
+            "**/WiremockExampleJsons/**",
+            "**/Features/HttpExamples.feature*",
+            "**/Steps/HttpExamplesSteps.cs"
+          ]
+        },
+        {
+          "condition": "(!IncludeGitHubActions)",
+          "exclude": [
+            ".github/**/*"
+          ]
+        }
+      ]
+    }
+  ],
+  "postActions": [
+    {
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true,
+      "description": "Restore NuGet packages",
+      "manualInstructions": [
+        {
+          "text": "Run 'dotnet restore'"
+        }
+      ]
+    }
+  ]
+}
