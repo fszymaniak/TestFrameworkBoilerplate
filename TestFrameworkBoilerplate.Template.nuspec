@@ -34,7 +34,10 @@
     </releaseNotes>
   </metadata>
   <files>
+    <!-- README.md must be in package root for NuGet readme feature -->
+    <file src="README.md" target="" />
+    <!-- Include all other files in content folder for template -->
     <file src="**\*" target="content"
-          exclude="**\bin\**;**\obj\**;**\.vs\**;**\.git\**;**\.idea\**;**\*.user;**\*.suo;**\TestResults\**;**/node_modules/**" />
+          exclude="**\bin\**;**\obj\**;**\.vs\**;**\.git\**;**\.idea\**;**\*.user;**\*.suo;**\TestResults\**;**/node_modules/**;README.md" />
   </files>
 </package>
