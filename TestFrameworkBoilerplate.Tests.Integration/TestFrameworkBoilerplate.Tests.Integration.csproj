@@ -31,10 +31,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TestFrameworkBoilerplate.Tests.WireMock\TestFrameworkBoilerplate.Tests.WireMock.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Update="ExampleJsons\GetExampleResponse.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>

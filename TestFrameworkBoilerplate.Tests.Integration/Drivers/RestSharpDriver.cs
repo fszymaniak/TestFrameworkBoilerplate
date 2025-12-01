@@ -22,8 +22,6 @@ public sealed class RestSharpDriver
     {
         var request = new RestRequest(endpoint);
         var response = await _client.ExecuteAsync(request);
-
-        var a = _wireMockDriver.GetUrl();
         return response;
     }
 
