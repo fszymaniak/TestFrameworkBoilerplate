@@ -28,10 +28,10 @@ public class HttpExamplesSteps
     public void ThenTheResultShouldBe(string expectedJsonName, string statusCode)
     {
         var response = _scenarioContext.GetHttpResponse();
-        response.StatusCode.Equals(Int32.Parse(statusCode));
+        ((int)response.StatusCode).ShouldBe(Int32.Parse(statusCode));
 
         string path = Path.Combine(_directoryPathSettings.Value.ExpectedExampleJsonDirectory, expectedJsonName);
-        
+
         string jsonString = File.ReadAllText(path);
         response.Content.ShouldBe(jsonString);
     }
@@ -40,7 +40,7 @@ public class HttpExamplesSteps
     public void ThenTheResultShouldBe()
     {
         var response = _scenarioContext.GetHttpResponse();
-        response.StatusCode.Equals(StatusCodes.Status201Created);
+        ((int)response.StatusCode).ShouldBe(StatusCodes.Status201Created);
     }
 
     private static Task<RestResponse> SelectRequest(string request, RestSharpDriver restSharpDriver, string endpoint) => request switch
